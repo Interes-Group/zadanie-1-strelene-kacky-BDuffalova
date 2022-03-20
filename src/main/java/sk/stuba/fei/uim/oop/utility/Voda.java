@@ -1,4 +1,10 @@
 package sk.stuba.fei.uim.oop.utility;
 
-public class Voda {
+import java.util.ArrayList;
+
+public class Voda extends Karta{
+    @Override
+    public void zahrajKartu() {
+    }
+
 }
