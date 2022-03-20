@@ -2,28 +2,31 @@ package sk.stuba.fei.uim.oop.utility;
 
 import java.util.ArrayList;
 
-public class Zamieriť extends Karta{
-    private boolean jeZamerany;
+public class Hrac {
+    private final String  meno;
+    private int zivoty;
+    private ArrayList<Karta> kartyNaRuke;
 
-    public Zamieriť() {
-        this.jeZamerany = false;
+    public String getMeno() {
+        return meno;
     }
 
-    public boolean getJeZamerany() {
-        return jeZamerany;
+    public Hrac(String meno) {
+        this.meno = meno;
+        this.zivoty =5;
+        this.kartyNaRuke= new ArrayList<Karta>();
+    }
+    public ArrayList<Karta> getKartyNaRuke(){
+        return this.kartyNaRuke;
+    }
+    public int getZivoty(){
+        return this.zivoty;
     }
 
-    public void setJeZamerany(boolean jeZamerany) {
-        this.jeZamerany = jeZamerany;
+    public void setZivoty(int zivoty) {
+        this.zivoty -= 1;
     }
 
-    @Override
-    public void zahrajKartu(ArrayList<Karta> kartyZameriavac) {
-
-        int indexZameriavaca = ZKlavesnice.readInt("Zvoľ zameriavač: ");
-        ((Zamieriť)kartyZameriavac.get(indexZameriavaca)).setJeZamerany(true);
-
-    }
     public boolean jeMozneHrat(ArrayList<Karta> kartyZameriavac, ArrayList<Karta> kartyNaRuke){
         int pocetZamierenych = 0;
         int pocetZameriavacovNaRuke = 0;
@@ -39,6 +42,4 @@ public class Zamieriť extends Karta{
         }
         return pocetZamierenych != 6 || pocetZameriavacovNaRuke != 3;
     }
-
-
 }

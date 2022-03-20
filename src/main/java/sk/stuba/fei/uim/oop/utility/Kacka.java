@@ -18,7 +18,7 @@ public class Kacka extends Karta{
     }
 
     @Override
-    public void zahrajKartu() {
+    public void zahrajKartu(ArrayList<Karta> karty) {
 
     }
 

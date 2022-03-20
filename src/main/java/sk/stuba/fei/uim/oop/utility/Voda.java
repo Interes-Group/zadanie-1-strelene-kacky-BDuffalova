@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Voda extends Karta{
     @Override
-    public void zahrajKartu() {
+    public void zahrajKartu(ArrayList<Karta> karty) {
     }
 
 }
