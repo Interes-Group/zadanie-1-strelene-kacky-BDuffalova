@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class KacaciPochod extends Karta{
     @Override
-    public void zahrajKartu(ArrayList<Karta> akcneKarty) {
+    public void zahrajKartu(ArrayList<Karta> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci) {
 
     }
 }

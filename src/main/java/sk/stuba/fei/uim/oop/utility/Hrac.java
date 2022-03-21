@@ -23,7 +23,7 @@ public class Hrac {
         return this.zivoty;
     }
 
-    public void setZivoty(int zivoty) {
+    public void setZivoty() {
         this.zivoty -= 1;
     }
 
@@ -31,7 +31,7 @@ public class Hrac {
         int pocetZamierenych = 0;
         int pocetZameriavacovNaRuke = 0;
         for(Karta karta : kartyZameriavac){
-            if(karta instanceof Zamieriť && ((Zamieriť) karta).getJeZamerany()){
+            if(karta instanceof Zamieriť && ((Zamieriť) karta).ziskajJeZamerany()){
                 pocetZamierenych++;
             }
         }

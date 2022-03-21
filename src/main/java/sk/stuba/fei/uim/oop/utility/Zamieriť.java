@@ -9,36 +9,20 @@ public class Zamieriť extends Karta{
         this.jeZamerany = false;
     }
 
-    public boolean getJeZamerany() {
+    public boolean ziskajJeZamerany() {
         return jeZamerany;
     }
 
-    public void setJeZamerany(boolean jeZamerany) {
+    public void nastavJeZamerany(boolean jeZamerany) {
         this.jeZamerany = jeZamerany;
     }
 
     @Override
-    public void zahrajKartu(ArrayList<Karta> kartyZameriavac) {
+    public void zahrajKartu(ArrayList<Karta> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci) {
 
-        int indexZameriavaca = ZKlavesnice.readInt("Zvoľ zameriavač: ");
-        ((Zamieriť)kartyZameriavac.get(indexZameriavaca)).setJeZamerany(true);
+        int indexZameriavaca = ZKlavesnice.readInt("Zvoľ nezameraný zameriavač (číslo od 0 - 5): ");
+        ((Zamieriť) zameriavace.get(indexZameriavaca)).nastavJeZamerany(true);
 
     }
-    public boolean jeMozneHrat(ArrayList<Karta> kartyZameriavac, ArrayList<Karta> kartyNaRuke){
-        int pocetZamierenych = 0;
-        int pocetZameriavacovNaRuke = 0;
-        for(Karta karta : kartyZameriavac){
-            if(karta instanceof Zamieriť && ((Zamieriť) karta).getJeZamerany()){
-                pocetZamierenych++;
-            }
-        }
-        for(Karta mojeKarty : kartyNaRuke){
-            if(mojeKarty instanceof Zamieriť){
-                pocetZameriavacovNaRuke++;
-            }
-        }
-        return pocetZamierenych != 6 || pocetZameriavacovNaRuke != 3;
-    }
-
 
 }
