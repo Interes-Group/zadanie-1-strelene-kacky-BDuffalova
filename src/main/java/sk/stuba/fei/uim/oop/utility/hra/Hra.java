@@ -141,18 +141,18 @@ public class Hra {
         for(int i = 0; i < 6 ; i++){
             if (this.poleZameriavacov.get(i).ziskajJeZamerany()) {
                 if(this.rybnik.get(i) instanceof Kacka){
-                    System.out.println(i + " Zamerané - 🦆 Kačka Hráča " + ((Kacka) this.rybnik.get(i)).ziskajMenoHraca());
+                    System.out.println(i + "✅ Zamerané - 🦆 Kačka Hráča " + ((Kacka) this.rybnik.get(i)).ziskajMenoHraca());
                 }
                 else{
-                    System.out.println(i + " Zamerané - Voda");
+                    System.out.println(i + "✅ Zamerané - 🌊 Voda");
                 }
             }
             else{
                 if(this.rybnik.get(i) instanceof Kacka){
-                    System.out.println(i + " Nezamerané - 🦆 Kačka Hráča " + ((Kacka) this.rybnik.get(i)).ziskajMenoHraca());
+                    System.out.println(i + "❎ Nezamerané - 🦆 Kačka Hráča " + ((Kacka) this.rybnik.get(i)).ziskajMenoHraca());
                 }
                 else{
-                    System.out.println(i + " Nezamerané - Voda");
+                    System.out.println(i + "❎ Nezamerané - 🌊 Voda");
                 }
 
             }
