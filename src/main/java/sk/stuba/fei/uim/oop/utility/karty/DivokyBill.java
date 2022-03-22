@@ -27,12 +27,15 @@ public class DivokyBill extends Karta {
             rybnik.get(indexZameriavaca).zahrajKartu(zameriavace,rybnik,hraci, balikRybnik);
         }
         else{
-            int indexHraca = ((Kacka)rybnik.get(indexZameriavaca)).getIndexHraca();
+            int indexHraca = ((Kacka)rybnik.get(indexZameriavaca)).ziskajIndexHraca();
             rybnik.get(indexZameriavaca).zahrajKartu(zameriavace,rybnik,hraci, balikRybnik);
-            hraci[indexHraca].setZivoty();
+            hraci[indexHraca].nastavZivoty();
             rybnik.remove(indexZameriavaca);
             rybnik.add(balikRybnik.get(0));
             balikRybnik.remove(0);
+            if(hraci[indexHraca].ziskajZivoty()==0){
+                System.out.println("Zabil si hráča " + hraci[indexHraca].ziskajMeno());
+            }
         }
         zameriavace.get(indexZameriavaca).nastavJeZamerany(false);
 

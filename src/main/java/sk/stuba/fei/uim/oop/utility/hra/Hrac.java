@@ -1,8 +1,6 @@
 package sk.stuba.fei.uim.oop.utility.hra;
 
 import sk.stuba.fei.uim.oop.utility.karty.Karta;
-import sk.stuba.fei.uim.oop.utility.karty.Zameriavac;
-import sk.stuba.fei.uim.oop.utility.karty.Zamieriť;
 
 import java.util.ArrayList;
 
@@ -11,7 +9,7 @@ public class Hrac {
     private int zivoty;
     private ArrayList<Karta> kartyNaRuke;
 
-    public String getMeno() {
+    public String ziskajMeno() {
         return meno;
     }
 
@@ -20,21 +18,21 @@ public class Hrac {
         this.zivoty =5;
         this.kartyNaRuke= new ArrayList<Karta>();
     }
-    public ArrayList<Karta> getKartyNaRuke(){
+    public ArrayList<Karta> ziskajKartyNaRuke(){
         return this.kartyNaRuke;
     }
 
-    public void setKartyNaRuke(Karta karta) {
+    public void nastavKartyNaRuke(Karta karta) {
         this.kartyNaRuke.add(karta);
     }
 
     public void odstranKartu(Karta karta){ this.kartyNaRuke.remove(karta);}
 
-    public int getZivoty(){
+    public int ziskajZivoty(){
         return this.zivoty;
     }
 
-    public void setZivoty() {
+    public void nastavZivoty() {
         this.zivoty -= 1;
     }
 

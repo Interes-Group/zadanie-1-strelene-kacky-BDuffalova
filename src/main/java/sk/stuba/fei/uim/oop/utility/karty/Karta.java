@@ -11,7 +11,7 @@ public abstract class Karta {
         this.nazovKarty = nazovKarty;
     }
 
-    public String getNazovKarty() {
+    public String ziskajNazovKarty() {
         return nazovKarty;
     }
 

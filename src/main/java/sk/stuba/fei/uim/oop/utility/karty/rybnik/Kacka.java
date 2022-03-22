@@ -17,21 +17,17 @@ public class Kacka extends Karta {
         this.menoHraca=menoHraca;
     }
 
-    public int getIndexHraca() {
+    public int ziskajIndexHraca() {
         return indexHraca;
     }
 
-    public String getMenoHraca() {
+    public String ziskajMenoHraca() {
         return menoHraca;
-    }
-
-    public void setIndexHraca(int indexHraca) {
-        this.indexHraca = indexHraca;
     }
 
     @Override
     public void zahrajKartu(ArrayList<Zameriavac> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci, ArrayList<Karta> balikRybnik) {
-        System.out.println("Zabil si kačku hráča " + getMenoHraca() + "!");
+        System.out.println("Zabil si 🦆 kačku hráča " + ziskajMenoHraca() + "!");
     }
 
 
