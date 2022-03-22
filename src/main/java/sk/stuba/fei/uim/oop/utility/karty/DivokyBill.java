@@ -9,6 +9,11 @@ import java.util.ArrayList;
 
 public class DivokyBill extends Karta {
 
+
+    public DivokyBill(String nazovKarty) {
+        super(nazovKarty);
+    }
+
     @Override
     public void zahrajKartu(ArrayList<Zameriavac> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci, ArrayList<Karta> balikRybnik) {
         int indexZameriavaca;

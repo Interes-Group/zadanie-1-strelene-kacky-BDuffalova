@@ -7,6 +7,11 @@ import sk.stuba.fei.uim.oop.utility.karty.rybnik.Voda;
 import java.util.ArrayList;
 
 public class TurboKacka extends Karta {
+
+    public TurboKacka(String nazovKarty) {
+        super(nazovKarty);
+    }
+
     @Override
     public void zahrajKartu(ArrayList<Zameriavac> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci, ArrayList<Karta> balikRybnik) {
         int indexKacice;

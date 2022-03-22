@@ -24,6 +24,12 @@ public class Hrac {
         return this.kartyNaRuke;
     }
 
+    public void setKartyNaRuke(Karta karta) {
+        this.kartyNaRuke.add(karta);
+    }
+
+    public void odstranKartu(Karta karta){ this.kartyNaRuke.remove(karta);}
+
     public int getZivoty(){
         return this.zivoty;
     }
@@ -32,19 +38,4 @@ public class Hrac {
         this.zivoty -= 1;
     }
 
-    public boolean jeMozneHrat(ArrayList<Zameriavac> kartyZameriavac, ArrayList<Karta> kartyNaRuke){
-        int pocetZamierenych = 0;
-        int pocetZameriavacovNaRuke = 0;
-        for(Zameriavac zameriavac : kartyZameriavac){
-            if(zameriavac.ziskajJeZamerany()){
-                pocetZamierenych++;
-            }
-        }
-        for(Karta mojeKarty : kartyNaRuke){
-            if(mojeKarty instanceof Zamieriť){
-                pocetZameriavacovNaRuke++;
-            }
-        }
-        return pocetZamierenych != 6 || pocetZameriavacovNaRuke != 3;
-    }
 }

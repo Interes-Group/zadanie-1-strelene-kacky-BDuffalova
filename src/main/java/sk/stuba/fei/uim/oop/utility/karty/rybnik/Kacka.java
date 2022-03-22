@@ -8,9 +8,11 @@ import java.util.ArrayList;
 
 public class Kacka extends Karta {
     private int indexHraca;
-    private String menoHraca;
+    private final String menoHraca;
 
-    public Kacka(int indexHraca,String menoHraca){
+
+    public Kacka(int indexHraca,String menoHraca,String nazovKarty){
+        super(nazovKarty);
         this.indexHraca=indexHraca;
         this.menoHraca=menoHraca;
     }

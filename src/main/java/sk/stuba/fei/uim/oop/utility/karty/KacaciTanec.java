@@ -3,10 +3,13 @@ package sk.stuba.fei.uim.oop.utility.karty;
 import sk.stuba.fei.uim.oop.utility.hra.Hrac;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class KacaciTanec extends Karta {
+
+    public KacaciTanec(String nazovKarty) {
+        super(nazovKarty);
+    }
 
     @Override
     public void zahrajKartu(ArrayList<Zameriavac> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci, ArrayList<Karta> balikRybnik) {
