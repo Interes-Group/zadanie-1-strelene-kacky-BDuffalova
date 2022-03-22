@@ -18,7 +18,7 @@ public class DivokyBill extends Karta {
     public void zahrajKartu(ArrayList<Zameriavac> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci, ArrayList<Karta> balikRybnik) {
         int indexZameriavaca;
         do {
-            indexZameriavaca = ZKlavesnice.readInt("Zvoľ nezameraný zameriavač (číslo od 0 po 5): ");
+            indexZameriavaca = ZKlavesnice.readInt("Zvoľ ľubovolný zameriavač (číslo od 0 po 5): ");
             if(indexZameriavaca< 0 || indexZameriavaca > 6){
                 System.out.println("Kto ťa učil čítať? Zadal si zlý index! Máš zadať číslo od 0 po 5 😒!");
             }
