@@ -1,4 +1,8 @@
-package sk.stuba.fei.uim.oop.utility;
+package sk.stuba.fei.uim.oop.utility.hra;
+
+import sk.stuba.fei.uim.oop.utility.karty.Karta;
+import sk.stuba.fei.uim.oop.utility.karty.Zameriavac;
+import sk.stuba.fei.uim.oop.utility.karty.Zamieriť;
 
 import java.util.ArrayList;
 
@@ -19,6 +23,7 @@ public class Hrac {
     public ArrayList<Karta> getKartyNaRuke(){
         return this.kartyNaRuke;
     }
+
     public int getZivoty(){
         return this.zivoty;
     }
@@ -27,11 +32,11 @@ public class Hrac {
         this.zivoty -= 1;
     }
 
-    public boolean jeMozneHrat(ArrayList<Karta> kartyZameriavac, ArrayList<Karta> kartyNaRuke){
+    public boolean jeMozneHrat(ArrayList<Zameriavac> kartyZameriavac, ArrayList<Karta> kartyNaRuke){
         int pocetZamierenych = 0;
         int pocetZameriavacovNaRuke = 0;
-        for(Karta karta : kartyZameriavac){
-            if(karta instanceof Zamieriť && ((Zamieriť) karta).ziskajJeZamerany()){
+        for(Zameriavac zameriavac : kartyZameriavac){
+            if(zameriavac.ziskajJeZamerany()){
                 pocetZamierenych++;
             }
         }
