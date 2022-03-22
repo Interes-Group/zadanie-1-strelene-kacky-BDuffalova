@@ -16,13 +16,13 @@ public class Zamieriť extends Karta {
         int indexZameriavaca;
         do {
             indexZameriavaca = ZKlavesnice.readInt("Zvoľ nezameraný zameriavač (číslo od 0 - 5): ");
-            if(indexZameriavaca< 0 || indexZameriavaca > 6){
+            if(indexZameriavaca< 0 || indexZameriavaca >= 6){
                 System.out.println("Kto ťa učil čítať? Zadal si zlý index! Máš zadať číslo od 0 po 5 😒!");
             }
             else if( zameriavace.get(indexZameriavaca).ziskajJeZamerany()){
                 System.out.println("Zameriavač, ktorý si zvolil už je zameraný, prosím zvoľ nový. 😊");
             }
-        } while ((indexZameriavaca < 0 || indexZameriavaca > 6) ||  zameriavace.get(indexZameriavaca).ziskajJeZamerany());
+        } while ((indexZameriavaca < 0 || indexZameriavaca >= 6) ||  zameriavace.get(indexZameriavaca).ziskajJeZamerany());
 
          zameriavace.get(indexZameriavaca).nastavJeZamerany(true);
 

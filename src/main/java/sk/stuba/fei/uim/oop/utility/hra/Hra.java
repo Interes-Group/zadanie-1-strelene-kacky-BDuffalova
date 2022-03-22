@@ -5,6 +5,7 @@ import sk.stuba.fei.uim.oop.utility.karty.*;
 import sk.stuba.fei.uim.oop.utility.karty.rybnik.Kacka;
 import sk.stuba.fei.uim.oop.utility.karty.rybnik.Voda;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -164,6 +165,7 @@ public class Hra {
             }
         }
     }
+
     private void zacniHru()
     {
         System.out.println("Hra sa začína! Držte si kačice! 😁");
