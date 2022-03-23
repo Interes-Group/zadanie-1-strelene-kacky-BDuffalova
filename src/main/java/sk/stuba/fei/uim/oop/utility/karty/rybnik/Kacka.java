@@ -7,7 +7,7 @@ import sk.stuba.fei.uim.oop.utility.karty.Zameriavac;
 import java.util.ArrayList;
 
 public class Kacka extends Karta {
-    private int indexHraca;
+    private final int indexHraca;
     private final String menoHraca;
 
 

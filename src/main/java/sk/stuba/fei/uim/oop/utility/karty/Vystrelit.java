@@ -41,6 +41,5 @@ public class Vystrelit extends Karta {
             }
         }
         zameriavace.get(indexZameriavaca).nastavJeZamerany(false);
-
     }
 }
