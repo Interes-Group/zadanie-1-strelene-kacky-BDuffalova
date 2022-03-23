@@ -141,7 +141,7 @@ public class Hra {
         for(int i = 0; i < 6 ; i++){
             if (this.poleZameriavacov.get(i).ziskajJeZamerany()) {
                 if(this.rybnik.get(i) instanceof Kacka){
-                    System.out.println(i + " ✅ Zamerané - 🦆 Kačka Hráča " +  hraci[i].ziskajMeno());
+                    System.out.println(i + " ✅ Zamerané - 🦆 Kačka Hráča " + ((Kacka) rybnik.get(i)).ziskajMenoHraca());
                 }
                 else{
                     System.out.println(i + " ✅ Zamerané - 🌊 Voda");
@@ -149,7 +149,7 @@ public class Hra {
             }
             else{
                 if(this.rybnik.get(i) instanceof Kacka){
-                    System.out.println(i + " ❎ Nezamerané - 🦆 Kačka Hráča " + hraci[i].ziskajMeno());
+                    System.out.println(i + " ❎ Nezamerané - 🦆 Kačka Hráča " + ((Kacka) rybnik.get(i)).ziskajMenoHraca());
                 }
                 else{
                     System.out.println(i + " ❎ Nezamerané - 🌊 Voda");
@@ -165,35 +165,28 @@ public class Hra {
             }
         }
     }
-    private void vycistiKonzolu(){
-        for(int i = 0;i<13;i++){
-            System.out.println();
-        }
-    }
+
 
     private void zacniHru()
     {
-        System.out.println("Hra sa začína! Držte si kačice, Bude to na život a na smrť! 😁");
-        System.out.println();
+        System.out.println("Hra sa začína! Držte si kačice! 😁");
         ArrayList<Karta> hratelneKarty;
-        int indexKarty;
         while(!Vitaz()) {
+            System.out.println("Na rade je hráč " + hraci[aktualnyHrac].ziskajMeno());
+            hratelneKarty = vratHratelneKarty(hraci[aktualnyHrac]);
+            this.vypisHraciePole();
+            int indexKarty;
             if(hraci[aktualnyHrac].ziskajZivoty()>0) {
-                System.out.println("Na rade je hráč " + hraci[aktualnyHrac].ziskajMeno());
-                System.out.println();
-                hratelneKarty = vratHratelneKarty(hraci[aktualnyHrac]);
-                this.vypisHraciePole();
-                System.out.println();
                 if (hratelneKarty.size() > 0) {
                     System.out.println("");
                     System.out.println("Tu sú tvoje karty, ktoré môžeš použiť: ");
                     vypisKarty(hratelneKarty);
                     do {
                         indexKarty = ZKlavesnice.readInt("Zvoľ si kartu ktorú chceš použiť (číslo od 0 po " + (hratelneKarty.size() - 1) + ")");
-                        if (indexKarty < 0 || indexKarty >= hratelneKarty.size()) {
+                        if (indexKarty < 0 || indexKarty > hratelneKarty.size()) {
                             System.out.println("Snžíš sa zvoliť neexistujúcu kartu!");
                         }
-                    } while (indexKarty < 0 || indexKarty >= hratelneKarty.size());
+                    } while (indexKarty < 0 || indexKarty > hratelneKarty.size());
                     hratelneKarty.get(indexKarty).zahrajKartu(this.poleZameriavacov, this.rybnik, this.hraci, this.balikRybnik);
                     this.balikHra.add(hratelneKarty.get(indexKarty));
                     hraci[aktualnyHrac].odstranKartu(hratelneKarty.get(indexKarty));
@@ -204,16 +197,15 @@ public class Hra {
                     vypisKarty(hraci[aktualnyHrac].ziskajKartyNaRuke());
                     do {
                         indexKarty = ZKlavesnice.readInt("Zvoľ si kartu ktorú chceš vyhodiť (číslo od 0 po 2)");
-                        if (indexKarty < 0 || indexKarty >= 3) {
+                        if (indexKarty < 0 || indexKarty > 3) {
                             System.out.println("Snžíš sa zvoliť neexistujúcu kartu!");
                         }
-                    } while (indexKarty < 0 || indexKarty >= 3 );
+                    } while (indexKarty < 0 || indexKarty > 2);
                     this.balikHra.add(hraci[aktualnyHrac].ziskajKartyNaRuke().get(indexKarty));
                     hraci[aktualnyHrac].odstranKartu(hraci[aktualnyHrac].ziskajKartyNaRuke().get(indexKarty));
                     hraci[aktualnyHrac].nastavKartyNaRuke(this.balikHra.get(0));
                     this.balikHra.remove(0);
                 }
-                hratelneKarty.clear();
             }
             if(aktualnyHrac ==pocetHracov-1){
                 aktualnyHrac =0;
@@ -221,12 +213,9 @@ public class Hra {
             else{
                 aktualnyHrac++;
             }
-            this.vycistiKonzolu();
+            hratelneKarty.clear();
         }
-        System.out.println("");
-        System.out.println("🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆");
         vypisVitaza();
-        System.out.println("🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆");
     }
 
 }
