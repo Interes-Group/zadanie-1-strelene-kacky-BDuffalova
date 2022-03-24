@@ -35,6 +35,21 @@ public class DivokyBill extends Karta {
             balikRybnik.remove(0);
             if(hraci[indexHraca].ziskajZivoty()==0){
                 System.out.println("Zabil si hráča " + hraci[indexHraca].ziskajMeno());
+                System.out.println("                                           \n" +
+                        "                               █████████████████████                                    \n" +
+                        "                             ██                     ██                                  \n" +
+                        "                            ██                       ██                                \n" +
+                        "                            ██    ████   ██   ████    ██                                \n" +
+                        "                            ██    █   █  ██   █   █   ██              \n" +
+                        "                            ██    ████   ██   ████    ██                     \n" +
+                        "                            ██    █  ██  ██   █       ██                      \n" +
+                        "                            ██                        ██                                    \n" +
+                        "                            ██                        ██                                  \n" +
+                        "                            ██                        ██                                \n" +
+                        "                            ████████████████████████████                               \n"
+                );
+                System.out.println();
+
             }
         }
         zameriavace.get(indexZameriavaca).nastavJeZamerany(false);

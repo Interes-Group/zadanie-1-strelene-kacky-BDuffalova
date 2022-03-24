@@ -27,7 +27,24 @@ public class Kacka extends Karta {
 
     @Override
     public void zahrajKartu(ArrayList<Zameriavac> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci, ArrayList<Karta> balikRybnik) {
-        System.out.println("Zabil si 🦆 kačku hráča " + ziskajMenoHraca() + "!");
+        System.out.println("                                           \n" +
+                "                                              ██████                                    \n" +
+                "                                            ██      ██                                  \n" +
+                "                                          ██          ██                                \n" +
+                "                                          ██      X  ██                                \n" +
+                "                                          ██        ░░░░██                              \n" +
+                "                                            ██      ████                                \n" +
+                "                              ██              ██  ██                                    \n" +
+                "                            ██  ██        ████    ██                                    \n" +
+                "                            ██    ████████          ██                                  \n" +
+                "                            ██                        ██                                \n" +
+                "                              ██              ██      ██                                \n" +
+                "                               Zabil si kačku hráča " + ziskajMenoHraca() + "!\n" +
+                "                              ██    ██      ██        ██                                \n" +
+                "                                ██    ████████      ██                                  \n" +
+                "                                ██                  ██                                  \n" +
+                "                                  ████          ████                                    \n" +
+                "                                      ██████████        ");
     }
 
 
