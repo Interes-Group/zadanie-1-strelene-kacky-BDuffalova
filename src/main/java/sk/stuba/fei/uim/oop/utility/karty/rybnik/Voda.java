@@ -14,6 +14,22 @@ public class Voda extends Karta {
     @Override
     public void zahrajKartu(ArrayList<Zameriavac> zameriavace, ArrayList<Karta> rybnik, Hrac[] hraci, ArrayList<Karta> balikRybnik) {
         System.out.println("Trafil si vodu!");
+        System.out.println("                                           \n" +
+                "                               █████████████████████                                    \n" +
+                "                             ██                    ██                                  \n" +
+                "                           ██              ████       ██                                \n" +
+                "                          ██             ██   ██    ██                                \n" +
+                "                         ██             ██   ██████              \n" +
+                "                          Trafil si vodu!\n" +
+                "                       ██            ██                     \n" +
+                "                      ██            ██                \n" +
+                "                     ██              ███                                    \n" +
+                "                   ██                  ████                                 \n" +
+                "                 ██                        ██████                               \n" +
+                "         ████████████████████████████████████████████████████████                               \n"
+        );
+        System.out.println();
+
     }
 
 }

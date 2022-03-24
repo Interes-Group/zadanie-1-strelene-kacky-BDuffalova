@@ -163,10 +163,26 @@ public class Hra {
     private void vypisVitaza(){
         for(Hrac hrac : this.hraci){
             if(hrac.ziskajZivoty()>0){
-                System.out.println("Vyhral hráč " + hrac.ziskajMeno() + "!");
+                System.out.println("                                           \n" +
+                        "                               █████████████████████████                                    \n" +
+                        "                               ██                     ██                                  \n" +
+                        "                              ████                   ████                                \n" +
+                        "                            ██  ██                   ██  ██         \n" +
+                        "                                Vyhral hráč " + hrac.ziskajMeno() + "!\n" +
+                        "                            ██  ██                   ██  ██\n" +
+                        "                              ██  ██               ██  ██\n" +
+                        "                                     ██████████████                              \n" +
+                        "                                           ██                                    \n" +
+                        "                                           ██                                  \n" +
+                        "                                           ██                                \n" +
+                        "                                      ████████████                               \n"
+                );
+                System.out.println();
+
+            }
             }
         }
-    }
+
     private void vykresliKacku() {
 
         System.out.println("                    ██████████\n" +
