@@ -5,7 +5,7 @@ import sk.stuba.fei.uim.oop.utility.hra.Hrac;
 import java.util.ArrayList;
 
 public abstract class Karta {
-    private final String nazovKarty;
+    protected final String nazovKarty;
 
     protected Karta(String nazovKarty) {
         this.nazovKarty = nazovKarty;
